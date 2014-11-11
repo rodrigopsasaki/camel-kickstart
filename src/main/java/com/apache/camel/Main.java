@@ -1,11 +1,8 @@
-package com.rodrigosasaki.java8.camel;
+package com.apache.camel;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.impl.DefaultCamelContext;
 
-/**
- * @author rodrigo.sasaki@icarros.com.br
- */
 public class Main {
 
     public static void main(String[] args) {

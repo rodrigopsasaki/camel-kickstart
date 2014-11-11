@@ -1,4 +1,4 @@
-package com.rodrigosasaki.java8.camel;
+package com.apache.camel;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
@@ -9,18 +9,16 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 
-/**
- * @author rodrigo.sasaki@icarros.com.br
- */
 public class MyFileRouteBuilder extends RouteBuilder {
 
-
+    private static final String INPUT = "";
+    private static final String OUTPUT = "";
 
     @Override
     public void configure() throws Exception {
-        from("file:/home/rodrigo/camel/input")
+        from("file:" + INPUT)
                 .process(new FileNameProcessor())
-                .to("file:/home/rodrigo/camel/output")
+                .to("file:" + OUTPUT)
                 .end();
     }
 
